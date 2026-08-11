@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelin ❤️ Enes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:Poppins,sans-serif}
+body{overflow:hidden;color:#fff;background:linear-gradient(135deg,#ff174f 0%,#ff4f9a 45%,#8b3dff 100%)}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 15%,#fff5,transparent 24%),radial-gradient(circle at 85% 80%,#ffb6f044,transparent 30%);pointer-events:none}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transform:translateY(20px) scale(.98);transition:.7s}
+.page.active{opacity:1;visibility:visible;transform:none}
+.box{width:min(860px,94vw);max-height:92vh;overflow:auto;padding:42px 30px;text-align:center;border:1px solid #ffffff44;border-radius:32px;background:#ffffff18;backdrop-filter:blur(18px);box-shadow:0 25px 90px #4a075c66}
+.box::-webkit-scrollbar{width:0}
+h1,h2{font-family:"Great Vibes",cursive}
+h1{font-size:clamp(65px,13vw,115px);margin:0 0 5px;text-shadow:0 8px 30px #730a4c88}
+h2{font-size:clamp(42px,8vw,70px);margin:8px 0 18px}
+p{font-size:17px;line-height:1.9;max-width:710px;margin:15px auto}
+button{margin-top:24px;border:0;border-radius:999px;padding:15px 34px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(90deg,#ff235f,#a83cff);box-shadow:0 10px 30px #650b8066;cursor:pointer;transition:.25s}
+button:hover{transform:translateY(-3px) scale(1.03)}
+.date{display:inline-block;padding:9px 18px;border:1px solid #fff5;border-radius:999px;background:#ffffff18}
+.heart{position:fixed;bottom:-50px;z-index:10;pointer-events:none;animation:float 7s linear forwards}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.slideshow{position:relative;width:min(680px,90vw);height:min(520px,60vh);margin:25px auto;border-radius:25px;overflow:hidden;box-shadow:0 20px 55px #42074e77;background:#0003}
+.slide{position:absolute;inset:0;opacity:0;transform:scale(1.05);transition:opacity .8s,transform 3.5s}
+.slide.active{opacity:1;transform:scale(1)}
+.slide img{width:100%;height:100%;object-fit:contain;background:#120518}
+.caption{position:absolute;left:0;right:0;bottom:0;padding:35px 16px 18px;background:linear-gradient(transparent,#000b);font-size:16px}
+.dots{display:flex;justify-content:center;gap:7px;margin:14px}.dot{width:8px;height:8px;border-radius:50%;background:#fff5}.dot.on{background:#fff;box-shadow:0 0 12px #fff}
+.finalheart{font-size:70px;animation:pulse 1.2s infinite alternate}
+@keyframes pulse{to{transform:scale(1.18)}}
+@media(max-width:600px){.box{padding:34px 18px}.slideshow{height:55vh}p{font-size:15px}}
+</style>
+</head>
+<body>
+<audio id="music" src="muzik.mp3" autoplay loop preload="auto"></audio>
+<button id="musicBtn" onclick="toggleMusic()" style="position:fixed;right:18px;top:18px;z-index:100;padding:10px 16px;margin:0;font-size:13px;background:#ffffff22;border:1px solid #ffffff55;backdrop-filter:blur(10px)">🔇 Müzik</button>
+<div id="hearts"></div>
+
+<section class="page active" id="p0"><div class="box">
+<div style="font-size:45px">💗</div>
+<div style="letter-spacing:3px;font-size:12px">ENES'TEN PELİN'E</div>
+<h1>Pelin</h1>
+<p>Senin için sıradan bir mesaj yazmak istemedim. Çünkü sen benim için sıradan biri değilsin.</p>
+<p>Bu sayfada gördüğün her kelime, sana bazen anlatamadığım duygularımın küçük bir parçası.</p>
+<button onclick="startMusicAndNext()">Devam Et ❤️</button>
+</div></section>
+
+<section class="page" id="p1"><div class="box">
+<h2>İyi ki varsın...</h2>
+<p>Pelin, hayatıma girdiğin için kendimi gerçekten çok şanslı hissediyorum. Seninle konuştuğum, güldüğüm, bazen sustuğum ve sadece yanında olduğumu hissettiğim her an benim için ayrı bir değer taşıyor.</p>
+<p>Bazen sana ne kadar değer verdiğimi anlatmaya kelimeler yetmiyor. Ama bilmeni istediğim bir şey var: <b>Sen benim için çok özelsin.</b></p>
+<p>Gülüşün, sesin ve en küçük detayların bile benim için anlamlı.</p>
+<button onclick="next()">Devam Et 💕</button>
+</div></section>
+
+<section class="page" id="p2"><div class="box">
+<h2>Bizim hikâyemiz...</h2>
+<div class="date">24 Nisan ❤️</div>
+<p>24 Nisan benim için sadece takvimdeki bir tarih değil. Çünkü o tarih, hayatımda seni daha farklı bir yere koyduğum günlerin başlangıcı.</p>
+<p>O günden bugüne birlikte yaşadığımız güzel anların, konuşmaların, kahkahaların ve birbirimize kattığımız her şeyin benim için ayrı bir yeri var.</p>
+<p>Hikâyemizin burada bitmesini değil, daha nice güzel anılarla devam etmesini istiyorum.</p>
+<button onclick="next()">Devam Et 🥀</button>
+</div></section>
+
+<section class="page" id="p3"><div class="box">
+<h2>Sana bir söz...</h2>
+<p>Her şeyin mükemmel olduğu zamanlarda yanında olmak kolay. Ben güzel günlerinde de zor günlerinde de yanında olmak istiyorum.</p>
+<p>Canın sıkkın olduğunda seni güldüren, mutlu olduğunda mutluluğuna ortak olan ve kendini yalnız hissettiğinde yanında olduğumu hatırlatan kişi olmak istiyorum.</p>
+<p>Çünkü seni sadece güzel anların için değil, <b>sen olduğun için</b> seviyorum.</p>
+<button onclick="next()">Fotoğraflara Geç ❤️</button>
+</div></section>
+
+<section class="page" id="p4"><div class="box">
+<h2>Bizden kalan güzel anlar 💗</h2>
+<p>Şimdi kelimeler biraz kenara çekilsin...</p>
+<div class="slideshow">
+<div class="slide active"><img src="images/foto1.jpg"><div class="caption">Seninle geçen güzel bir an ❤️</div></div>
+<div class="slide"><img src="images/foto2.jpg"><div class="caption">Birlikte her şey daha güzel 💕</div></div>
+<div class="slide"><img src="images/foto3.jpg"><div class="caption">Gülüşün aklımda kalan en güzel şeylerden biri 💜</div></div>
+<div class="slide"><img src="images/foto4.jpg"><div class="caption">Bizim küçük dünyamız 🥀</div></div>
+<div class="slide"><img src="images/foto5.jpg"><div class="caption">Daha nice anılarımıza... 💞</div></div>
+</div>
+<div class="dots" id="dots"></div>
+<button onclick="next()">Son Bir Şey Var... 💞</button>
+</div></section>
+
+<section class="page" id="p5"><div class="box">
+<div class="finalheart">❤️</div>
+<h2>Pelin, seni çok seviyorum. (babandan bağımsız🙈)</h2>
+<p>İyi ki hayatımdasın. İyi ki yollarımız kesişmiş. İyi ki birlikte güzel anılar biriktiriyoruz.</p>
+<p>Belki bu site sana küçük bir sürpriz gibi gelecek ama arkasındaki his benim için hiç küçük değil.</p>
+<p><b>Sen benim için çok değerlisin.</b></p>
+<p>Bugün, yarın ve gelecekte birlikte gülebileceğimiz daha çok anımız olsun.</p>
+<h2>İyi ki benimlesin. 💗</h2>
+<p style="font-family:'Great Vibes';font-size:40px">Seni çok seviyorum sevgilim.<br>— Enes ❤️</p>
+</div></section>
+
+<script>
+let page=0,started=false,slide=0;
+const pages=[...document.querySelectorAll('.page')],slides=[...document.querySelectorAll('.slide')];
+function next(){
+ const music=document.getElementById("music");
+ music.volume=0.45;
+ music.play().then(()=>{
+   document.getElementById("musicBtn").textContent="🔊 Müzik";
+ }).catch(()=>{});
+ pages[page].classList.remove('active');
+ page=Math.min(page+1,pages.length-1);
+ pages[page].classList.add('active');
+ if(page===4 && !started){started=true;startSlides();}
+}
+function toggleMusic(){
+ const music=document.getElementById("music");
+ const btn=document.getElementById("musicBtn");
+ if(music.paused){
+   music.play();
+   btn.textContent="🔊 Müzik";
+ }else{
+   music.pause();
+   btn.textContent="🔇 Müzik";
+ }
+}
+function startSlides(){
+ const dots=document.getElementById('dots');
+ dots.innerHTML=slides.map((_,i)=>`<span class="dot ${i===0?'on':''}"></span>`).join('');
+ setInterval(()=>{
+  if(page!==4)return;
+  slides[slide].classList.remove('active');
+  slide=(slide+1)%slides.length;
+  slides[slide].classList.add('active');
+  [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===slide));
+ },3500);
+}
+const icons=["❤️","💗","💕","💖","💜","🥀","✨","💞"];
+setInterval(()=>{
+ const h=document.createElement("span");h.className="heart";
+ h.textContent=icons[Math.floor(Math.random()*icons.length)];
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(16+Math.random()*25)+"px";
+ h.style.animationDuration=(5+Math.random()*4)+"s";
+ document.getElementById("hearts").appendChild(h);
+ setTimeout(()=>h.remove(),10000);
+},350);
+</script>
+
+<script>
+window.addEventListener("load", function(){
+  const music=document.getElementById("music");
+  if(!music) return;
+  music.loop=true;
+  music.volume=0.45;
+  const tryPlay=()=>music.play().then(()=>{
+    const btn=document.getElementById("musicBtn");
+    if(btn) btn.textContent="🔊 Müzik Açık";
+  }).catch(()=>{});
+  tryPlay();
+  document.addEventListener("click", function once(){
+    tryPlay();
+    document.removeEventListener("click", once);
+  }, {once:true});
+});
+
+function startMusicAndNext(){
+ const music=document.getElementById("music");
+ if(music){
+   music.loop=true;
+   music.volume=0.45;
+   music.play().catch(()=>{});
+ }
+ next();
+}
+</script>
+<style>
+@keyframes pulseBtn{to{transform:scale(1.05);box-shadow:0 0 28px #fff8}}
+</style>
+
+</body>
+</html>
